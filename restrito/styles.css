@@ -84,6 +84,7 @@ button, #logout {
     transition: background-color 0.3s; 
 }
 
+
 button:hover, #logout:hover {
     background-color: #705d41;  
 }
