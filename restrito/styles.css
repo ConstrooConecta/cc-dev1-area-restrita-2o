@@ -37,6 +37,8 @@ body {
 
 .sidebar ul li {
     margin: 15px 0;  
+    background-color: #12424c;
+    border-radius: 5px;
 }
 
 .sidebar ul li a {
@@ -47,10 +49,6 @@ body {
     border-radius: 5px;  
     transition: background-color 0.3s;  
 }
-/*======================================================*/
-body.light-theme li a:hover {
-    background-color: #0d3139;  
-}
 
 .content {
     margin-left: 270px;  
@@ -58,7 +56,7 @@ body.light-theme li a:hover {
     flex: 1;  
 }
 
-h1 {
+h1, h2 {
     color: #867151;
     font-size: 2rem;
     margin-bottom: 20px;
@@ -67,6 +65,7 @@ h1 {
 
 p {
     margin-bottom: 20px;
+    color: #937c5a;
 }
 
 #logout {
@@ -81,7 +80,11 @@ p {
     width: 220px;
 }
 
-button:hover {
+button, #logout {
+    transition: background-color 0.3s; 
+}
+
+button:hover, #logout:hover {
     background-color: #705d41;  
 }
 
@@ -94,23 +97,19 @@ button:hover {
 }
 
 canvas {
-    width:800px;
-    height:400.25px;
+    width: 800px;
     height: auto !important;  
 }
 
-p{
-    color: #937c5a;
+#titulo_esquerda {
+    cursor: pointer;
 }
 
 body.light-theme {
     background-color: #0e343c;
     color: #333;
 }
- 
-#titulo_esquerda{
-    cursor: pointer;
-}
+
 body.dark-theme {
     background-color: #333333;  
     color: #ffffff;  
@@ -120,17 +119,18 @@ body.palette-theme {
     background-color: #937c5a;  
     color: #0e343c;  
 }
-body.palette-theme h1, h2{
+
+body.palette-theme h1, body.palette-theme h2 {
     color: #0e343c;
 }
 
-body.palette-theme button{
-    background-color:#0e343c ;
-}
-body.palette-theme button:hover{
-    background-color:#0a272d ;
+body.palette-theme button, body.palette-theme #logout {
+    background-color: #0e343c;
 }
 
+body.palette-theme button:hover, body.palette-theme #logout:hover {
+    background-color: #0a272d;
+}
 
 body.dark-theme .sidebar {
     background-color: #444444; 
@@ -140,18 +140,22 @@ body.dark-theme .sidebar {
 body.palette-theme .sidebar {
     background-color: #867151;  
 }
-body.palette-theme  .sidebar h2 {
+
+body.palette-theme .sidebar h2 {
     color: #0e343c;
     margin-bottom: 20px;
 }
 
-li{
-    /*
-    #12424c
-    #17525e
-    */
-    background-color: #12424c;
-    border-radius: 5px;
+body.dark-theme li {
+    background-color: #535353;
+}
+
+body.dark-theme li:hover {
+    background-color: #4d4d4d;
+}
+
+body.palette-theme li:hover {
+    background-color: #0d333b;
 }
 
 .theme-dropdown {
@@ -177,9 +181,6 @@ li{
 .dropbtn:hover {
     background-color: #705d41;
 }
-#logout:hover {
-    background-color: #705d41;
-}
 
 .lista-temas {
     display: none;
@@ -190,7 +191,6 @@ li{
     z-index: 1;
     width: 160px;
     border-radius: 5px;
-   
 }
 
 .lista-temas.show {
@@ -220,59 +220,4 @@ li{
 
 .color-box.palette-theme {
     background-color: #937c5a; 
-}
-
- 
-body.light-theme {
-    background-color: #0e343c;
-    color: #333;
-}
-
-body.dark-theme {
-    background-color: #333333;
-    color: #ffffff;
-}
-
-body.palette-theme {
-    background-color: #937c5a;
-    color: #0e343c;
-}
-body.palette-theme #logout{
-    background-color:#0e343c ;
-}
-body.palette-theme #logout:hover{
-    background-color:#0a272d ;
-}
-
-body.palette-theme h1, h2 {
-    color: #0e343c;
-}
-
-body.palette-theme button {
-    background-color: #0e343c;
-}
-
-body.dark-theme .sidebar {
-    background-color: #444444;
-    color: #0e343c;
-}
-body.dark-theme li{
-    background-color:#535353 ;
-}
-body.dark-theme li:hover{
-    background-color:#4d4d4d ;
-}
-
-body.palette-theme .sidebar {
-    background-color: #867151;
-}
-
-body.palette-theme .sidebar h2 {
-    color: #0e343c;
-}
-body.palette-theme li:hover{
-    background-color: #0d333b;
-}
-body.palette-theme #texto {
-    color: #0d333b;
 }
