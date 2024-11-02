@@ -5,38 +5,57 @@ const span = document.getElementById("closeModal");
 const loginForm = document.getElementById("loginForm");
 
 // Abre o modal quando o botão é clicado
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+btn.addEventListener("click", () => modal.style.display = "block");
 
 // Fecha o modal quando o usuário clica no "X"
-span.onclick = function() {
-    modal.style.display = "none";
-}
+span.addEventListener("click", () => modal.style.display = "none");
 
 // Fecha o modal quando o usuário clica fora do modal
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Gerencia o formulário de login
-loginForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Exemplo simples de validação de login
-    if (username === 'admin' && password === 'senha') {
-        alert("Login bem-sucedido!");
-        modal.style.display = "none"; // Fecha o modal
-        localStorage.setItem('loggedIn', 'true');
-        window.location.href = '../restrito/restricted.html';
-    } else {
-        document.getElementById('error').innerText = 'Usuário ou senha inválidos.';
-    }
+window.addEventListener("click", (event) => {
+  if (event.target === modal) modal.style.display = "none";
 });
 
+// Gerencia o formulário de login
+loginForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
+  const usernameOrEmail = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const button = loginForm.querySelector("button[type='submit']");
+  button.disabled = true;
+  button.innerHTML = '<div class="spinner"></div>'; // Adiciona a spinner
+
+  try {
+    let response = await fetch(
+      `https://cc-api-nosql-qa.onrender.com/admin/findByUserAdmin/${usernameOrEmail}`
+    );
+
+    if (!response.ok) {
+      response = await fetch(
+        `https://cc-api-nosql-qa.onrender.com/admin/findByEmailAdmin/${usernameOrEmail}`
+      );
+    }
+
+    if (response.ok) {
+      const adminData = await response.json();
+      const admin = adminData[0];
+
+      if (admin && admin.senha === password) {
+        alert("Login bem-sucedido!");
+        modal.style.display = "none";
+        localStorage.setItem("token", admin.id);
+        window.location.href = "../restrito/restricted.html";
+      } else {
+        document.getElementById("error").innerText = "Senha inválida.";
+      }
+    } else {
+      document.getElementById("error").innerText = "Usuário ou e-mail não encontrado.";
+    }
+  } catch (error) {
+    document.getElementById("error").innerText = "Erro ao conectar com o servidor.";
+    console.error("Erro:", error);
+  } finally {
+    button.disabled = false;
+    button.innerHTML = "Entrar";
+  }
+});
