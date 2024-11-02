@@ -16,7 +16,7 @@ O projeto está em desenvolvimento e sujeito a mudanças.
 
 
 
-# MOBILE
+# Área restrita
 * [Funcionalidades do projeto](#hammer-funcionalidades-do-projeto)
 * [Acesso ao projeto](#file_folder-acesso-ao-projeto)
 * [Abrir e rodar](#hammer_and_wrench-abrir-e-rodar-o-projeto)
@@ -29,8 +29,8 @@ O projeto está em desenvolvimento e sujeito a mudanças.
 
 # :hammer: Funcionalidades do projeto
 
-- `Funcionalidade 1`: Cadastro e login usando API
-- `Funcionalidade 2`: Mostra dados e dashboars sobre o app "constroo"
+- `Funcionalidade 1`: Login usando API
+- `Funcionalidade 2`: Mostra dados e dashboards sobre o app "constroo"
 - `Funcionalidade 3`: Diferentes temas personalizados
 
 # :file_folder: Acesso ao projeto
