@@ -1,290 +1,311 @@
 /* Estilos gerais */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
+  margin: 0; /* Remove margem padrão */
+  padding: 0; /* Remove padding padrão */
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0e343c;
-  color: #333;
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
+  background-color: #0e343c; /* Cor de fundo da página */
+  color: #333; /* Cor do texto padrão */
 }
 
 .container {
-  display: flex;
+  display: flex; /* Permite o layout flexível para a sidebar e conteúdo */
 }
 
+/* Estilos da sidebar */
 .sidebar {
-  width: 250px;
-  color: #867151;
-  background-color: #0a262c;
-  padding: 15px;
-  height: 100vh;
-  position: fixed;
-  overflow-y: auto;
+  width: 250px; /* Largura fixa da sidebar */
+  color: #867151; /* Cor do texto da sidebar */
+  background-color: #0a262c; /* Cor de fundo da sidebar */
+  padding: 15px; /* Espaçamento interno */
+  height: 100vh; /* Altura total da viewport */
+  position: fixed; /* Fixa a sidebar na tela */
+  overflow-y: auto; /* Permite rolagem vertical */
 }
 
 .sidebar h2 {
-  color: #937c5a;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  color: #937c5a; /* Cor dos títulos na sidebar */
+  margin: 20px 0 15px; /* Margens verticais dos títulos */
 }
 
+/* Lista da sidebar */
 .sidebar ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none; /* Remove marcadores da lista */
+  padding: 0; /* Remove padding padrão */
 }
 
 .sidebar ul li {
-  margin: 15px 0;
-  border-radius: 5px;
+  margin: 15px 0; /* Margem entre os itens da lista */
+  border-radius: 5px; /* Arredonda bordas dos itens */
 }
 
+/* Estilos para links da sidebar */
 .sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  color: white; /* Cor padrão do texto dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+  padding: 10px; /* Espaçamento interno do link */
+  display: block; /* Permite que todo o espaço do link seja clicável */
+  border-radius: 5px; /* Arredonda bordas dos links */
+  transition: background-color 0.3s; /* Transição suave para mudanças de cor */
 }
 
-/* Estilos para os botões ativos */
+/* Estilo para o link ativo */
 .sidebar ul li a.active {
   background-color: #3b8cba; /* Cor do botão "Dashboard de Perfil" */
-  color: white;
+  color: white; /* Cor do texto do link ativo */
 }
 
-.sidebar ul li a.active + a {
-  background-color: #6ab04c; /* Cor do botão "Dashboard de Avaliação" */
-  color: white;
-}
-
-/* Estilo padrão dos botões */
-.sidebar ul li a {
-  color: white;
-}
-
-/* Efeito de hover para os botões da sidebar */
+/* Efeito de hover para links */
 .sidebar ul li a:hover {
   background-color: #1a4d54; /* Cor de fundo ao passar o mouse */
   color: #ffffff; /* Cor do texto ao passar o mouse */
 }
 
-/* Efeito de hover para botões ativos (selecionados) */
+/* Efeito de hover para links ativos */
 .sidebar ul li a.active:hover {
-  background-color: #3b8cba; /* Cor de fundo ao passar o mouse em um botão ativo */
-  opacity: 0.8; /* Levemente transparente para indicar que pode ser deselecionado */
-  cursor: pointer; /* Mudança do cursor para indicar interatividade */
+  background-color: #3b8cba; /* Cor de fundo ao passar o mouse em um link ativo */
+  opacity: 0.8; /* Levemente transparente */
+  cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
 }
 
+/* Estilos do conteúdo */
 .content {
-  margin-left: 270px;
-  padding: 20px;
-  flex: 1;
+  margin-left: 270px; /* Espaço à esquerda para a sidebar */
+  padding: 20px; /* Espaçamento interno */
+  flex: 1; /* Permite que o conteúdo ocupe o espaço restante */
 }
 
-h1,
-h2 {
-  display: flex;
-  color: #867151;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+/* Estilos para títulos e parágrafos */
+h1, h2 {
+  display: flex; /* Flexbox para controle de layout */
+  color: #867151; /* Cor dos títulos */
+  font-size: 2rem; /* Tamanho da fonte dos títulos */
+  margin-bottom: 20px; /* Margem inferior dos títulos */
+  border-bottom: 1px solid #ccc; /* Linha inferior dos títulos */
 } 
 
 p {
-  margin-bottom: 20px;
-  color: #867151;
+  margin-bottom: 20px; /* Margem inferior dos parágrafos */
+  color: #867151; /* Cor dos parágrafos */
 }
 
+/* Estilo do botão de logout */
 #logout {
-  background-color: #865151;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 220px;
+  background-color: #865151; /* Cor de fundo do botão de logout */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove bordas do botão */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 5px; /* Arredonda bordas do botão */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: background-color 0.3s; /* Transição suave para mudanças de cor */
+  width: 220px; /* Largura fixa do botão */
 }
 
 button,
 #logout {
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* Transição suave para botões */
 }
 
 button:hover,
 #logout:hover {
-  background-color: #705d41;
+  background-color: #705d41; /* Cor ao passar o mouse */
 }
 
+/* Estilos para containers de gráfico */
 .graph-container {
-  display: flex;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex; /* Flexbox para layout */
+  margin-top: 20px; /* Margem superior */
+  padding: 20px; /* Espaçamento interno */
+  background-color: white; /* Cor de fundo */
+  border-radius: 5px; /* Arredonda bordas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .companyLogo {
-  display: flex;
-  justify-content: center;
+  display: flex; /* Flexbox para centralização */
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
+/* Estilos do logotipo */
 #logo {
-  display: flex;
-  width: 120px;
-  height: 110px;
-  cursor: pointer;
+  display: flex; /* Flexbox para layout */
+  width: 120px; /* Largura do logotipo */
+  height: 110px; /* Altura do logotipo */
+  cursor: pointer; /* Cursor de ponteiro */
 }
 
 /* Estilos para o botão e dropdown do tema */
 .theme-dropdown {
-  position: relative;
-  margin-top: 20px;
+  position: relative; /* Posicionamento relativo para dropdown */
+  margin-top: 20px; /* Margem superior */
 }
 
+/* Estilo do botão de dropdown */
 .dropbtn {
-  background-color: #0a262c;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 16px;
-  text-align: left;
-  transition: background-color 0.3s;
-  margin-bottom: 20px;
+  background-color: #0a262c; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 15px; /* Espaçamento interno */
+  border: none; /* Remove bordas do botão */
+  cursor: pointer; /* Cursor de ponteiro */
+  border-radius: 5px; /* Arredonda bordas do botão */
+  width: 100%; /* Largura total do botão */
+  font-size: 16px; /* Tamanho da fonte do botão */
+  text-align: left; /* Alinhamento do texto à esquerda */
+  transition: background-color 0.3s; /* Transição suave para mudanças de cor */
+  margin-bottom: 20px; /* Margem inferior do botão */
 }
 
+/* Efeito de hover para o botão de dropdown */
 .dropbtn:hover {
-  background-color: #12424c;
+  background-color: #12424c; /* Cor ao passar o mouse */
 }
 
+/* Estilos para a lista de temas */
 .lista-temas {
-  display: none;
-  position: absolute;
-  background-color: #0e343c;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%;
-  z-index: 1;
-  top: 45px;
-  left: 0;
+  display: none; /* Inicialmente oculto */
+  position: absolute; /* Posicionamento absoluto para dropdown */
+  background-color: #0e343c; /* Cor de fundo da lista */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  border-radius: 5px; /* Arredonda bordas */
+  padding: 10px; /* Espaçamento interno */
+  width: 100%; /* Largura total da lista */
+  z-index: 1; /* Eleva a lista sobre outros elementos */
+  top: 45px; /* Posição vertical */
+  left: 0; /* Posição horizontal */
 }
 
 .lista-temas.show {
-  display: block;
+  display: block; /* Mostra a lista se a classe 'show' for aplicada */
 }
 
+/* Estilos para as cores do tema */
 .color-box {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 5px;
+  width: 30px; /* Largura das caixas de cor */
+  height: 30px; /* Altura das caixas de cor */
+  border-radius: 5px; /* Arredonda bordas das caixas */
+  cursor: pointer; /* Cursor de ponteiro */
+  display: inline-block; /* Permite que as caixas fiquem lado a lado */
+  margin: 5px; /* Margem entre as caixas de cor */
 }
 
 .light-theme {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* Cor de fundo do tema claro */
 }
 
 .dark-theme {
-  background-color: #333333;
+  background-color: #0a262c; /* Cor de fundo do tema escuro */
 }
 
 .palette-theme {
-  background-color: #937c5a;
+  background-color: #937c5a; /* Cor de fundo do tema palette */
+}
+
+/* Estilos de cor do tema baseado em classes */
+body.dark-theme h1,
+body.dark-theme #introducao p {
+  color: #ffffff; /* Cor do texto no tema escuro */
 }
 
 body.light-theme h1,
 body.light-theme #introducao p {
-  color: #0a262c;
+  color: #0a262c; /* Cor do texto no tema claro */
 }
 
-/* Cores para o tema palette-theme */
 body.palette-theme h1,
 body.palette-theme #introducao p {
-  color: #0e343c; /* Cor desejada para h1 e p no tema palette */
+  color: #100c3e; /* Cor do texto no tema palette */
 }
 
-/* Estilo do h1 e p no tema padrão (light e dark) */
+/* Transição suave ao mudar de tema */
 h1,
 #introducao p {
-  transition: color 0.3s; /* Transição suave ao mudar de tema */
+  transition: color 0.3s; /* Transição suave para a cor do texto */
 }
 
-/* Para dispositivos móveis */
+/* Estilos responsivos para dispositivos móveis */
 @media (max-width: 768px) {
-  .dropbtn {
-    padding: 8px;
-    font-size: 14px;
+  #introducao {
+    display: flex; /* Flexbox para layout */
+    text-align: center; /* Alinhamento central do texto */
+    padding: 20px; /* Espaçamento interno */
   }
+
+  #tituloAR {
+    display: flex; /* Flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+  }
+
+  #tituloAR h1 {
+    font-size: 1.0rem; /* Tamanho da fonte para h1 */
+  }
+
+  .dropbtn {
+    padding: 8px; /* Espaçamento interno reduzido */
+    font-size: 14px; /* Tamanho da fonte reduzido */
+  }
+
   .lista-temas {
-    width: auto;
-    top: 40px;
+    width: auto; /* Largura automática para lista de temas */
+    top: 40px; /* Posição vertical ajustada */
   }
 
   .container {
-    flex-direction: column;
+    flex-direction: column; /* Altera para layout de coluna */
   }
 
   .sidebar {
-    width: 250px;
-    position: fixed;
-    left: -250px;
-    transition: left 0.3s ease;
+    width: 250px; /* Largura da sidebar */
+    position: fixed; /* Fixa a sidebar */
+    left: -250px; /* Oculta a sidebar à esquerda */
+    transition: left 0.3s ease; /* Transição suave para mostrar/esconder */
   }
 
   .sidebar.show {
-    left: 0;
+    left: 0; /* Mostra a sidebar quando a classe 'show' é aplicada */
   }
 
   .content {
-    margin-left: 0;
-    padding: 10px;
+    margin-left: 0; /* Remove a margem esquerda do conteúdo */
+    padding: 10px; /* Espaçamento interno reduzido */
   }
 
   h1,
   h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem; /* Tamanho da fonte reduzido para h1 e h2 */
+    margin-bottom: 15px; /* Margem inferior reduzida */
   }
 
   .sidebar ul li a {
-    padding: 8px;
-    font-size: 1rem;
+    padding: 8px; /* Espaçamento interno reduzido para links da sidebar */
+    font-size: 1rem; /* Tamanho da fonte reduzido para links */
   }
 
   #logout {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Largura total do botão de logout */
+    padding: 10px; /* Espaçamento interno do botão de logout */
   }
 
   .graph-container {
-    padding: 10px;
-    width: 100%;
+    padding: 10px; /* Espaçamento interno reduzido para container de gráfico */
+    width: 100%; /* Largura total do container de gráfico */
   }
 
-  /* Botão de Menu */
+  /* Estilo do botão de menu */
   .menu-button {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #0a262c;
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 2;
+    display: block; /* Mostra o botão de menu */
+    position: absolute; /* Posição absoluta do botão */
+    top: 10px; /* Posição vertical do botão */
+    left: 10px; /* Posição horizontal do botão */
+    background-color: #0a262c; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove bordas do botão */
+    padding: 10px; /* Espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte do botão */
+    border-radius: 5px; /* Arredonda bordas do botão */
+    cursor: pointer; /* Cursor de ponteiro */
+    z-index: 2; /* Eleva o botão sobre outros elementos */
   }
 }
