@@ -1,14 +1,14 @@
 // Verifica se o token de sessão está presente no localStorage
 const token = localStorage.getItem("token");
 if (!token) {
-    window.location.href = "../Login/Login.html"; // Redireciona para a página de login se não estiver logado
+    window.location.href = "../login.html"; // Redireciona para a página de login se não estiver logado
 }
 
 // Evento para logout (bubble)
 document.getElementById("logout").addEventListener("click", (e) => {
     e.stopPropagation(); // Impede a propagação do evento
     localStorage.removeItem("token"); // Remove o token de sessão
-    window.location.href = "../Login/Login.html"; // Redireciona para a página de login
+    window.location.href = "../login.html"; // Redireciona para a página de login
 });
 
 // Variável para armazenar o gráfico ativo
