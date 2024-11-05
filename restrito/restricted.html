@@ -1,57 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Área Restrita</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <div class="container">
-    <!-- Botão de Menu -->
-    <button class="menu-button" onclick="toggleSidebar()">☰</button>
-    <aside class="sidebar">
-      <div class="companyLogo">
-        <img id="logo" src="/assets/ConstruConectaLogoWhite.svg" alt="Logo ConstruConecta" />
-      </div>
-      <h2>Dashboard BI</h2>
-      <ul>
-        <li>
-          <a href="#" id="btnPerfil" onclick="showGraph('perfil')">Dashboard de Perfil</a>
-        </li>
-        <li>
-          <a href="#" id="btnAvaliacao" onclick="showGraph('avaliacao')">Dashboard de Avaliação</a>
-        </li>
-      </ul>
-      
-      <div class="theme-dropdown">
-        <button onclick="toggleDropdown()" class="dropbtn">Tema ▼</button>
-        <div id="themeDropdown" class="lista-temas">
-          <div class="color-box light-theme" onclick="changeTheme('light')"></div>
-          <div class="color-box dark-theme" onclick="changeTheme('dark')"></div>
-          <div class="color-box palette-theme" onclick="changeTheme('palette')"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área Restrita</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Botão de Menu -->
+      <button class="menu-button" onclick="toggleSidebar()">☰</button>
+      <aside class="sidebar">
+        <div class="companyLogo">
+          <img
+            id="logo"
+            src="/assets/ConstruConectaLogoWhite.svg"
+            alt="Logo ConstruConecta"
+          />
         </div>
-      </div>
-      
-      <button id="logout">Sair</button>
-    </aside>
-    <main class="content">
-      <div id="tituloAR">
-        <h1>Bem-vindo à Área Restrita</h1>
-      </div>
-      <div id="introducao">
-        <p>Essa é a área restrita do projeto interdisciplinar da empresa ConstruConecta, aqui temos o Power BI de nossas pesquisas e afins.</p>
-      </div>
-      <!-- Containers para gráficos, inicialmente escondidos -->
-      <div class="graph-container" id="perfil" style="display: none">
-        <iframe title="Dashboard de Perfil" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZDBlMTBiMTEtODgwOC00ODlmLTg5YTctMTY5NGExMmUyY2Y4IiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="graph-container" id="avaliacao" style="display: none">
-        <iframe title="Dashboard de Avaliação" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZWRlMGFhN2EtMGRkNC00ZGNlLTk2YjAtMDFhNzZlMTgwNTAyIiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </main>
-  </div>
-  <script src="restricted.js"></script>
-</body>
+        <h2>Dashboard BI</h2>
+        <ul>
+          <li>
+            <a href="#" id="btnPerfil" onclick="showGraph('perfil')"
+              >Dashboard de Perfil</a
+            >
+          </li>
+          <li>
+            <a href="#" id="btnAvaliacao" onclick="showGraph('avaliacao')"
+              >Dashboard de Avaliação</a
+            >
+          </li>
+        </ul>
+
+        <div class="theme-dropdown">
+          <button onclick="toggleDropdown()" class="dropbtn">Tema ▼</button>
+          <div id="themeDropdown" class="lista-temas">
+            <div
+              class="color-box light-theme"
+              onclick="changeTheme('light')"
+            ></div>
+            <div
+              class="color-box dark-theme"
+              onclick="changeTheme('dark')"
+            ></div>
+            <div
+              class="color-box palette-theme"
+              onclick="changeTheme('palette')"
+            ></div>
+          </div>
+        </div>
+
+        <button id="logout">Sair</button>
+      </aside>
+      <main class="content">
+        <div id="tituloAR">
+          <h1>Bem-vindo à Área Restrita</h1>
+        </div>
+        <div id="introducao">
+          <p>
+            Essa é a área restrita do projeto interdisciplinar da empresa
+            ConstruConecta, aqui temos o Power BI de nossas pesquisas e afins.
+          </p>
+        </div>
+        <!-- Containers para gráficos, inicialmente escondidos -->
+        <div class="graph-container" id="perfil" style="display: none">
+          <iframe
+            title="Dashboard de Perfil"
+            width="100%"
+            height="600"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZDBlMTBiMTEtODgwOC00ODlmLTg5YTctMTY5NGExMmUyY2Y4IiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="graph-container" id="avaliacao" style="display: none">
+          <iframe
+            title="Dashboard de Avaliação"
+            width="100%"
+            height="600"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZWRlMGFhN2EtMGRkNC00ZGNlLTk2YjAtMDFhNzZlMTgwNTAyIiwidCI6ImIxNDhmMTRjLTIzOTctNDAyYy1hYjZhLTFiNDcxMTE3N2FjMCJ9"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </main>
+    </div>
+    <script src="restricted.js"></script>
+  </body>
 </html>

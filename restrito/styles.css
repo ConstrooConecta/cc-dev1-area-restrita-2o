@@ -79,13 +79,14 @@ body {
 }
 
 /* Estilos para títulos e parágrafos */
-h1, h2 {
+h1,
+h2 {
   display: flex; /* Flexbox para controle de layout */
   color: #867151; /* Cor dos títulos */
   font-size: 2rem; /* Tamanho da fonte dos títulos */
   margin-bottom: 20px; /* Margem inferior dos títulos */
   border-bottom: 1px solid #ccc; /* Linha inferior dos títulos */
-} 
+}
 
 p {
   margin-bottom: 20px; /* Margem inferior dos parágrafos */
@@ -239,7 +240,7 @@ h1,
   }
 
   #tituloAR h1 {
-    font-size: 1.0rem; /* Tamanho da fonte para h1 */
+    font-size: 1rem; /* Tamanho da fonte para h1 */
   }
 
   .dropbtn {
