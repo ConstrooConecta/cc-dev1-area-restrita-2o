@@ -29,7 +29,7 @@ O projeto está em desenvolvimento e sujeito a mudanças.
 
 # :hammer: Funcionalidades do projeto
 
-- `Funcionalidade 1`: Login usando API
+- `Funcionalidade 1`: Login usando API NOSQL
 - `Funcionalidade 2`: Mostra dados e dashboards sobre o app "constroo"
 - `Funcionalidade 3`: Diferentes temas personalizados
 
@@ -68,4 +68,8 @@ Este projeto representa um passo significativo no desenvolvimento de uma area re
 Agradecemos a todos que contribuíram para este projeto, e esperamos que ele evolua ainda mais com novas funcionalidades e melhorias. Fique à vontade para explorar o código, contribuir com ideias e fazer sugestões. A colaboração da comunidade é fundamental para o sucesso deste projeto!
 
 Estamos animados com o que vem a seguir e ansiosos para compartilhar as próximas atualizações.
+
+# Time completo:
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/124629701?s=400&v=4" width=115><br><sub>Roger Rodrigues de Santana</sub>](https://github.com/Roger13san) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/124402143?v=4" width=115><br><sub>Kauã Rodrigues dos santos</sub>](https://github.com/kauarsantoss)  |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/142252283?v=4" width=115><br><sub>Maria Julia Santos De Oliveira</sub>](https://github.com/oliveir4maju)  |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/144955008?v=4" width=115><br><sub>Talita De Brito Nalon</sub>](https://github.com/TalitaNalon) 
+| :---: | :---: | :---: | :---: |
 
