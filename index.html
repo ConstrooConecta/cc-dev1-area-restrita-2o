@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Área Restrita</h1>
+        <div class="logo-container">
+          <img src="./assets/LogoEmpresa.jpg" alt="Logo Advocacia" />
+        </div>
+      </div>
+    </header>
+
+    <div class="loginBtn">
+      <button id="openModal">Login</button>
+    </div>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+          <label for="username">Usuário ou Email:</label>
+          <input
+            type="text"
+            id="username"
+            required
+            placeholder="Digite seu usuário ou email"
+          />
+          <label for="password">Senha:</label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Digite sua senha"
+          />
+          <button type="submit">Entrar</button>
+          <div id="error" style="color: red"></div>
+        </form>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
