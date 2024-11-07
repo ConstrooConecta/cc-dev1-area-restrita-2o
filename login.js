@@ -63,11 +63,13 @@ loginForm.addEventListener("submit", async (e) => {
       const admin = adminData[0];
 
       if (admin && admin.senha === password) {
-        alert("Login bem-sucedido!");
         modal.style.display = "none";
+        const currentTime = new Date().getTime(); // Tempo atual em milissegundos
         localStorage.setItem("token", admin.id);
+        localStorage.setItem("tokenTimestamp", currentTime); // Armazena o horário de criação do token
         window.location.href = "../restrito/restricted.html";
-      } else {
+      }
+       else {
         document.getElementById("error").innerText = "Senha inválida.";
       }
     } else {

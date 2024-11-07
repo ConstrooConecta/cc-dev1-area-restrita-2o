@@ -1,15 +1,29 @@
-// Verifica se o token de sessão está presente no localStorage
+// Verifica se o token de sessão e o timestamp estão presentes no localStorage
 const token = localStorage.getItem("token");
-if (!token) {
+const tokenTimestamp = localStorage.getItem("tokenTimestamp");
+
+if (!token || !tokenTimestamp) {
   window.location.href = "../index.html"; // Redireciona para a página de login se não estiver logado
+} else {
+  const currentTime = new Date().getTime();
+  const tokenAge = currentTime - parseInt(tokenTimestamp, 10); // Idade do token em milissegundos
+  const expirationTime = 60 * 60 * 1000; // 1 hora em milissegundos
+
+  if (tokenAge > expirationTime) {
+    localStorage.removeItem("token");
+    localStorage.removeItem("tokenTimestamp");
+    window.location.href = "../index.html"; // Redireciona para a página de login
+  }
 }
 
 // Evento para logout (bubble)
 document.getElementById("logout").addEventListener("click", (e) => {
-  e.stopPropagation(); // Impede a propagação do evento
-  localStorage.removeItem("token"); // Remove o token de sessão
-  window.location.href = "../index.html"; // Redireciona para a página de login
-});
+    e.stopPropagation();
+    localStorage.removeItem("token");
+    localStorage.removeItem("tokenTimestamp");
+    window.location.href = "../index.html";
+  });
+  
 
 // Variável para armazenar o gráfico ativo
 let activeGraph = null;
